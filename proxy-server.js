@@ -1,17 +1,15 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors'); // Import cors
+
 const app = express();
 const port = 3000;
 const API_KEY = '5a2da80f-e4e1-4669-874e-12312e1e2283';  // Replace with your actual CoinMarketCap API key
 
 app.use(express.json());
 
-// Allow CORS for all routes
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// Use cors middleware
+app.use(cors());
 
 // Endpoint to get cryptocurrency info including the logo, market cap, volume, and percentage change
 app.get('/crypto/info', async (req, res) => {
