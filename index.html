@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Info Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0"></script>
+</head>
+<body>
+    <form class="cryptoForm">
+        <input class="cryptoInput" type="text" placeholder="Enter Crypto Name">
+        <button type="submit">Search</button>
+    </form>
+    <section class="placeholder" id="placeholder">
+        <h1>Welcome to Crypto Info</h1>
+        <p>Enter the name of a cryptocurrency to get started.</p>
+        <p>For example, try "Bitcoin" or "Ethereum".</p>
+    </section>
+    <div class="card">
+        <div class="percentageDisplay">
+            <p id="percentageChange"> <span id="changeValue"></span></p>
+            <span id="changeArrow" class="arrow"></span>
+        </div>
+    </div>
+    <div id="chart-container" class="chart-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-name">Yohans B</p>
+            <p class="footer-role">Developer</p>
+            <p class="footer-details">Building modern web solutions with a passion for clean code and innovative design.</p>
+            <p class="footer-contact">
+                <a href="mailto:yohansdemisie@gmail.com">yohansdemisie@gmail.com</a> | 
+                <a href="https://https://github.com/yohansbekele12" target="_blank">GitHub</a> | 
+                <a href="https://www.linkedin.com/in/yohans-b-a1a975205/" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
