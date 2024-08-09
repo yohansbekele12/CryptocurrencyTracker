@@ -1,17 +1,17 @@
+require('dotenv').config();
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors'); // Import cors
 
 const app = express();
 const port = 3000;
-const API_KEY = '5a2da80f-e4e1-4669-874e-12312e1e2283';  // Replace with your actual CoinMarketCap API key
-
+const API_KEY = process.env.API_KEY;  
 app.use(express.json());
 
-// Use cors middleware
+
 app.use(cors());
 
-// Endpoint to get cryptocurrency info including the logo, market cap, volume, and percentage change
+
 app.get('/crypto/info', async (req, res) => {
     const { name } = req.query;
 
