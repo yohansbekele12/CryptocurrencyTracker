@@ -1,11 +1,14 @@
-require('dotenv').config();
-const express = require('express');
-const fetch = require('node-fetch');
-const cors = require('cors'); // Import cors
+import express from 'express';
+import fetch from 'node-fetch';
+import cors from 'cors'; // Import cors
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 
 const app = express();
 const port = 3000;
-const API_KEY = process.env.API_KEY;  
+const API_KEY = process.env.API_KEY;
 app.use(express.json());
 
 
@@ -20,7 +23,7 @@ app.get('/crypto/info', async (req, res) => {
     }
 
     try {
-        // Fetch the map to get the ID for the given name
+        // Corrected URL for the map data
         const mapUrl = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=${API_KEY}`;
         const mapResponse = await fetch(mapUrl, {
             method: 'GET',
@@ -84,6 +87,7 @@ app.get('/crypto/info', async (req, res) => {
         res.status(500).json({ error: 'An error occurred while fetching data.' });
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Proxy server running at http://localhost:${port}`);

@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fetch": "^1.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "name": "cryptocurrencytracker",
+  "version": "1.0.0",
+  "description": "**CryptocurrencyTracker** is an application that allows you to track the latest prices and trends of cryptocurrencies in real-time. Whether you're a casual investor or a crypto enthusiast, this tool helps you monitor the market efficiently.",
+  "main": "proxy-server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yohansbekele12/CryptocurrencyTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yohansbekele12/CryptocurrencyTracker/issues"
+  },
+  "homepage": "https://github.com/yohansbekele12/CryptocurrencyTracker#readme"
+}
